@@ -113,3 +113,16 @@ form:nth-child(2) {
 #label-name {
   font-size: 15px;
 }
+
+/* CSS Variable */
+:root {
+  --primary: #2a7b9b;
+  --secondary: #57c785;
+  --tertiary: #eddd53;
+  --defaultpadding: 10px;
+}
+
+input {
+  background-color: var(--primary);
+  padding: var(--defaultpadding);
+}
