@@ -1,0 +1,115 @@
+/* Element Selector */
+label {
+  background-color: orange;
+}
+
+/* ID Selector */
+#label-name {
+  color: red;
+}
+
+/* Class Selector */
+.register-form {
+  color: blue;
+}
+
+/* Group Selector */
+h2,
+.register-form {
+  color: green;
+}
+
+/* Descendant Selector */
+form h2 {
+  color: red;
+  text-align: center;
+}
+
+form {
+  width: 400px;
+  height: 200px;
+}
+
+/* Attribute Selector */
+a[href="#"] {
+  color: purple;
+}
+
+/* Universal Selector */
+* {
+  font-family: "Fira Code", monospace;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Priority : inline > id > class > element */
+
+form {
+  /* background: #2a7b9b; */
+  /* background: linear-gradient(
+    90deg,
+    rgba(42, 123, 155, 1) 0%,
+    rgba(87, 199, 133, 1) 50%,
+    rgba(237, 221, 83, 1) 100%
+  ); */
+  background: url("./local.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Relative Unit */
+/* 1rem (root em) -> 16px */
+/* 1em */
+/* % -> relative to parent */
+/* vw -> viewport width */
+/* vh -> viewport height */
+
+/* margin, padding, border */
+p {
+  border: 1px solid red;
+  /* border-width: 1px;
+    border-style: solid;
+    border-color: red; */
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 20px 10px 20px;
+}
+
+/* psudo class */
+button {
+  background-color: green;
+}
+button:hover {
+  background-color: red;
+}
+button:active {
+  background-color: orange;
+}
+input:focus {
+  background-color: yellow;
+}
+
+/* psudo element*/
+form input {
+  background-color: yellow;
+}
+
+form:first-child {
+  background-color: red;
+}
+
+form:last-child {
+  background-color: blue;
+}
+
+form:nth-child(2) {
+  background-color: green;
+}
+
+.form-label {
+  font-size: 17px;
+}
+#label-name {
+  font-size: 15px;
+}
