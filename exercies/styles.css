@@ -59,13 +59,14 @@ body {
 }
 
 #card-footer {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-normal);
 }
 
-#card-footer span {
+#card-footer p {
   color: var(--grey-950);
   font-size: var(--font-normal);
   font-weight: bold;
-  margin-left: var(--space-normal);
-  vertical-align: super;
 }

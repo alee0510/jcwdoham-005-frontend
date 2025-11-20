@@ -1,128 +1,46 @@
-/* Element Selector */
-label {
-  background-color: orange;
-}
-
-/* ID Selector */
-#label-name {
-  color: red;
-}
-
-/* Class Selector */
-.register-form {
-  color: blue;
-}
-
-/* Group Selector */
-h2,
-.register-form {
-  color: green;
-}
-
-/* Descendant Selector */
-form h2 {
-  color: red;
-  text-align: center;
-}
-
-form {
-  width: 400px;
-  height: 200px;
-}
-
-/* Attribute Selector */
-a[href="#"] {
-  color: purple;
-}
-
-/* Universal Selector */
 * {
-  font-family: "Fira Code", monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  background-color: antiquewhite;
+}
+
+@media screen and (min-width: 480px) {
+  section {
+    background-color: yellow;
+  }
+}
+
+section div {
+  font-size: 2rem;
+  color: white;
   font-weight: bold;
-  font-size: 1rem;
-}
-
-/* Priority : inline > id > class > element */
-
-form {
-  /* background: #2a7b9b; */
-  /* background: linear-gradient(
-    90deg,
-    rgba(42, 123, 155, 1) 0%,
-    rgba(87, 199, 133, 1) 50%,
-    rgba(237, 221, 83, 1) 100%
-  ); */
-  background: url("./local.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Relative Unit */
-/* 1rem (root em) -> 16px */
-/* 1em */
-/* % -> relative to parent */
-/* vw -> viewport width */
-/* vh -> viewport height */
-
-/* margin, padding, border */
-p {
-  border: 1px solid red;
-  /* border-width: 1px;
-    border-style: solid;
-    border-color: red; */
-  border-radius: 10px;
-  padding: 10px;
-  margin: 10px 20px 10px 20px;
-}
-
-/* psudo class */
-button {
-  background-color: green;
-}
-button:hover {
+  display: grid;
+  place-items: center;
   background-color: red;
-}
-button:active {
-  background-color: orange;
-}
-input:focus {
-  background-color: yellow;
-}
-
-/* psudo element*/
-form input {
-  background-color: yellow;
+  width: 200px;
+  height: 200px;
+  animation: rotation 3s ease infinite;
+  /* transition: all 3s ease; */
+  /* transform: translate(100px, 100px) rotate(360deg); */
 }
 
-form:first-child {
-  background-color: red;
-}
-
-form:last-child {
-  background-color: blue;
-}
-
-form:nth-child(2) {
-  background-color: green;
-}
-
-.form-label {
-  font-size: 17px;
-}
-#label-name {
-  font-size: 15px;
-}
-
-/* CSS Variable */
-:root {
-  --primary: #2a7b9b;
-  --secondary: #57c785;
-  --tertiary: #eddd53;
-  --defaultpadding: 10px;
-}
-
-input {
-  background-color: var(--primary);
-  padding: var(--defaultpadding);
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    background-color: burlywood;
+  }
 }
